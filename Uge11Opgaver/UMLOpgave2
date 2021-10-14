@@ -1,0 +1,20 @@
+@startuml
+Controller *-- View
+Controller *-- CalculateVAT
+Controller *-- Dialog
+
+CalculateVAT : int PRCVAT
+CalculateVAT : double doVat(double number)
+
+Dialog : double doDiag()
+
+View : String MSG
+View : String currency
+View : doView(double result)
+
+Controller : Dialog diag
+Controller : CalculateVAT vat
+Controller : View view
+Controller : runController()
+
+@enduml
